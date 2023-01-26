@@ -1,0 +1,3 @@
+SHELL=/bin/sh
+
+*/1 * * * * root touch /home/pupil/it_works.txt

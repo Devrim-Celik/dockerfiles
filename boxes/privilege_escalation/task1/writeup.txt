@@ -1,0 +1,11 @@
+* start the service
+* connect to it using ssh and credentials `pupil:cla2023`
+* SUID find commands results in showing the binary `/bin/cp` to have the SUID bit set
+* create a new passwd file, which is just as the old one, only with an extra line containing a new root user, e.g.,
+```
+newuser:$1$ignite$3eTbJm98O9Hz.k1NTdNxe1:0:0:/root:/bin/bash
+```
+where the hash that is shown stands for the password `pass123`
+* get this file on this machine by simply copy and pasting, or using a server
+* use `cp` to copy this new `passwd` file over the official `/etc/passwd` file
+* `su newuser`, use the pw and you have root privileges
